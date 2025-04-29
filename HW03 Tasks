@@ -1,0 +1,34 @@
+Task 1
+owner (public) Überall zugreifbar – in jeder Klasse und jedem Package
+
+Wird in allen 3 Klassen erfolgreich gelesen
+
+❌ balance (private) Nur innerhalb der Account-Klasse zugreifbar
+
+Nicht sichtbar in AccountManager, ExternalAudit, CompanyAccount
+
+✅ pin (protected) Zugreifbar in:
+
+der Klasse selbst
+
+allen Subklassen, auch in anderen Packages
+
+nicht zugreifbar in nicht-vererbenden Klassen (AccountManager, ExternalAudit)
+
+✅ internalNote (default / package-private) Nur im selben Package sichtbar
+
+AccountManager kann es sehen (weil im selben Package)
+
+ExternalAudit & CompanyAccount nicht, weil in anderen Packages
+
+Task2
+Q1
+Message m1 = new Email(); //Message static, Email dynamic
+Message m2 = new SMS(); //Message static, SMS dynamic
+Q2
+Email.getType(), weil m1 dynamisch ein Email ist
+Q3
+Der Compiler erlaubt nur Methoden, die im statischen Typ vorhanden sind
+Q4
+??
+
