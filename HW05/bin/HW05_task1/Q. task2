@@ -1,0 +1,21 @@
+ 1) What generally happens if an exception is thrown but not caught?
+ -->
+ If an exception is thrown but not caught, the program will terminate abnormally.
+  The Java Virtual Machine (JVM) prints a stack trace that shows where the exception occurred, 
+  but the program stops at the point the exception was thrown. 
+  This makes debugging harder and can lead to crashes or incomplete processes, especially in larger systems.
+  
+ 2) Discuss the advantage of catching specific exceptions (e.g., InvalidShippingInfoException)
+ rather than just catching a general Exception.
+ -->
+ Catching specific exceptions allows the program to handle different error situations appropriately. 
+ It makes the code easier to debug and maintain because you know exactly what went wrong and where. 
+ In contrast, catching a general Exception can hide problems and make it unclear which part of the code failed, 
+ leading to less precise error handling.
+ 
+ 3) Explain when a try with resources should be used an what its advantages are. (???)
+ -->"A try-with-resources block should be used when working with classes that implement the AutoCloseable interface
+  (like FileReader, BufferedReader, Scanner, Connection, etc.).
+The advantage is that it automatically closes the resource after the block, even if an exception occurs. 
+This helps prevent resource leaks (z. B. offene Dateien oder Datenbankverbindungen) and leads to cleaner, safer code."
+ 

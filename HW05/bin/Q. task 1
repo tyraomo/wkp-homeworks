@@ -1,0 +1,28 @@
+(2)Is your code an example of dependency injection? Explain why or why not.
+Bed.:
+Dependency Injection (DI) bedeutet: Wir geben einem Objekt seine Abhängigkeiten (z. B. andere Objekte),
+anstatt dass es sie selbst erzeugt 
+ 
+ --> ja schon, da z.B. Customer auf profile zurückgreift welche von außen,
+ also aus der Profile Klasse stammt.
+ 
+
+(3)You realize that your code breaks the law of Demeter, explain why and what a possible fix
+looks like.
+
+Bedeutung LoD: Eine Methode sollte nur mit ihren direkten Bekannten kommunizieren, 
+nicht mit den „Bekannten der Bekannten“
+Das heißt: Ein Objekt soll nur auf Methoden von:
+
+-sich selbst,
+
+-seinen Attributen,
+
+-seinen Methodenargumenten oder
+
+-lokal erstellten Objekten zugreifen.
+
+--> wird verletzt, da customer auch . getShippingInfo (). getCity () aufruft.
+-->Möglichkeit, das Problem zu beheben,
+besteht darin, eine neue Methode wie getShippingCity() direkt in der Klasse Customer zu implementieren.
+Dadurch kann in der main-Methode direkt auf customer.getShippingCity() zugegriffen werden.
